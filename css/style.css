@@ -1,0 +1,303 @@
+/*
+=================
+Table of Contents
+=================
+
+# Nav Section
+# Slider Section
+# Contact Section
+
+*/
+
+/*  
+	===========================
+	# Nav Section
+	===========================
+*/
+
+
+
+#page-wrap
+{
+
+	text-align: left; 
+	margin: 0 auto;
+	
+
+}
+.navbar-brand > img {
+    display: inline;
+    width: 100px;
+}
+
+@media screen and (max-width: 386px){
+	.navbar-brand > img{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.navbar-brand > img{
+		width: 60px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 421px){
+	.navbar-custom .navbar-brand {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.navbar-custom .navbar-brand {
+		font-size: 20px;
+	}
+}
+
+
+a.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  
+	===========================
+	# Slider Section
+	===========================
+*/
+.sy-box {
+    margin-top: 52px;
+
+}
+
+@media screen and (min-width: 768px){
+	.sy-box {
+
+	margin-top: 100px;
+	}
+}
+
+/*  
+	===========================
+	# Contact Section
+	===========================
+*/
+#map{
+	width: 100%;
+	height: 400px;
+}
+
+#contact h3 {
+
+	text-align: center;
+}
+
+#contact p {
+    text-align: left;
+}
+
+#phone p{
+
+	text-align: center;
+}
+
+
+
+
+ .div .logo {
+
+
+	float : center;
+	width: 100px ;
+	height: 100px; 
+	background: url('../img/sgb_logo.png');
+
+}
+
+.parent {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+     
+	
+
+
+}
+
+.parent p{
+
+	margin: 0px ;
+	padding-left: 10px;
+
+
+
+}
+
+#sphiere a {
+
+	filter: grayscale(1);
+	transition: filter 0.55;
+
+}
+
+#sphiere a:hover {
+
+	filter: none;
+}
+
+#credits {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+.img-slider {
+
+
+	border:5px solid; 
+}
+
+.container h2{
+
+	margin: 0; 
+	font-size:3em;
+}
+
+
+.icon-success glyphicon glyphicon-chevron-right{
+
+
+color: #18BC9C;
+font-size: 250% ;
+padding-left: 10px;
+padding-bottom: 10px;
+padding-right: 10px;
+
+}
+
+.icon-success glyphicon glyphicon-chevron-left {
+
+color: #18BC9C;
+font-size: 250% ;
+padding-bottom: 10px;
+}
+
+
+@media (min-width: 320px){
+.row p  {
+
+font-size: 1rem ;
+
+
+}
+}
+
+@media (min-width: 544px){
+.row p {
+
+font-size: 1.5rem ;
+
+
+}
+}
+
+
+@media (min-width: 768px){
+.row p {
+
+font-size: 1.5rem ;
+
+
+}
+}
+
+@media (min-width: 992px){
+.row p {
+
+font-size: 2rem ;
+
+
+}
+}
+
+@media (min-width: 1200px){
+.row p {
+
+font-size: 2rem ;
+
+
+}
+}
+
+#img-slider 
+{
+
+	background-color: #BDE5B8;
+}
+
+#portfolio
+{
+
+	background-color: #D3E8E1;
+}
+
+#section.contact	{
+
+
+	background-color: #167c80;
+}
+
+
+@media (min-width: 544px) {
+
+	.glyphicon {
+
+font-size: 2rem ;
+
+}
+
+}
+
+
+@media (min-width: 544px) {
+
+
+
+
+.fa {
+
+	font-size: 2rem ;
+}
+
+}
+
+
+
+@media (min-width: 320px) {
+
+	.glyphicon {
+
+font-size: 1rem ;
+
+}
+
+}
+
+
+@media (min-width: 320px) {
+
+
+
+
+.fa {
+
+	font-size: 1rem ;
+}
+
+}
+
