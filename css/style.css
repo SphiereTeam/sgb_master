@@ -412,3 +412,10 @@ pointer-events: none;
 	transform: translateY(-10px);
 
 }
+
+
+ #client {
+
+max-width: 100%; 
+
+}
