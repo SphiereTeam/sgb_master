@@ -801,136 +801,22 @@
 				zoom: 15,
 				scrollwheel: false,
 				center: sgb_location
+
+
 			});
+
+
 			var marker = new google.maps.Marker({
 				position: sgb_location,
 				map: map,
 				icon: 'Image/sgb-75x40.png', 
 
-				styles: [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "off"
-            },
-            {
-                "color": "#767676"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#767676"
-            },
-            {
-                "lightness": "-23"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#acd5cb"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "lightness": "49"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#acd5cb"
-            },
-            {
-                "lightness": "49"
-            }
-        ]
-    }
-]
 			});
+
+			
 		}
+
+
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOi9WEcj0Jv1E3Eu46lwwiPOrzNwqZwPg&callback=initMap"></script>
 	
