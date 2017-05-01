@@ -405,3 +405,17 @@ pointer-events: none;
 
 	font-family:muli bold;
 }
+
+.paragraph {
+
+
+	text-align: justify; 
+
+}
+
+.find
+{
+
+	padding-bottom:20px;
+	text-align: justify;
+}
