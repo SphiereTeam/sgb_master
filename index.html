@@ -434,15 +434,7 @@
 					</div>
 
 					</div>
-							
 
-	
-
-
-
-
-
-				
 
 				<div class="col-xs-12 col-sm-6">
 					<div id="map"></div>
@@ -805,20 +797,31 @@
 				zoom: 15,
 				scrollwheel: false,
 				center: sgb_location
-
-
+				
 			});
 
 
 			var marker = new google.maps.Marker({
+			
 				position: sgb_location,
 				map: map,
-				icon: 'Image/sgb-75x40.png', 
-
+				icon: 'Image/sgb-75x40.png',
+				url: 'https://goo.gl/maps/cJ5D8fHsi172'
 			});
 
+			marker.addListener('click', function()
 
-		}
+			{
+				window.open(this.url, "_blank");
+			});
+
+			
+			}
+
+			
+
+
+		
 
 
 	</script>
