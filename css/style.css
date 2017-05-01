@@ -406,14 +406,14 @@ pointer-events: none;
 	font-family:muli bold;
 }
 
-.paragraph {
+.col-lg-4 {
 
 
 	text-align: justify; 
 
 }
 
-.find
+.col-xs-12
 {
 
 	padding-bottom:20px;
