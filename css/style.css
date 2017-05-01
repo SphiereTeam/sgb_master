@@ -399,8 +399,9 @@ pointer-events: none;
 }
 
 
- #client {
+.collapsed 
 
-max-width: 50%%; 
+{
 
+	font-family:muli bold;
 }
