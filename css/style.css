@@ -420,3 +420,21 @@ pointer-events: none;
 	text-align: justify;
 }
 
+
+@media screen and (max-width: 350px){
+
+	#credits{
+
+		flex-direction : column;
+
+	}
+}
+
+@media screen and (max-width: 350px){
+
+	#sphiere{
+		margin-bottom: 20px;
+	}
+}
+
+
