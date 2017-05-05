@@ -421,7 +421,7 @@ pointer-events: none;
 }
 
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 358px){
 
 	#credits{
 
@@ -430,7 +430,7 @@ pointer-events: none;
 	}
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 358px){
 
 	#sphiere{
 		margin-bottom: 20px;
