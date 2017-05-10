@@ -18,9 +18,20 @@
 .ih-item.circle.effect6  .info {
 
 	opacity: 1; 
-	transform: scale(1);
+	transform: scale(2);
 	
 
 
 }
+}
+
+
+@media screen and (max-width: 406px){
+
+.ih-item.circle.effect6.scale_up .info {
+
+
+	transform: scale(1);
+}
+
 }
