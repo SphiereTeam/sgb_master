@@ -1,0 +1,92 @@
+<link href="https://fontawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<!--footer start from here-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter"> LOCATION</div>
+        
+	
+	
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">LOCATION</h6>
+        <p>UNIT 1-6, Block A, Junjongan Industrial Park,</p>
+					<p>Simpang 2169, Jalan Junjongan, Mukim Pangkalan Batu,</p>
+					<p> BH 2123</p>
+					<p>Bandar Seri Begawan, Brunei Darussalam</p>
+					<div class="parent "> 
+						<i class="glyphicon glyphicon-earphone"></i>	
+						 <p>+673 2640228 </p>
+					</div> 
+
+					<div class="parent"> 
+						<i class="glyphicon glyphicon-envelope"></i>
+						<p> singuan1966@gmail.com</p>
+					</div>
+						
+					<div class="parent"> 	
+						<i class="fa fa-fax"></i>
+								
+						<p> +673 2640178 </p>
+      </div>
+  </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">HOURS</h6>
+        <div class="post">
+        	<p> Monday - Saturday : 0800 - 1700 </p>
+        	<p> Friday : Closed, 1200 - 1400 </p> 
+        	<p> Sunday : Closed </p>
+          
+
+        </div>
+      </div>
+    
+    <div class="footer-bottom">
+    </div>
+    </div>
+  </div>
+
+
+  <!--google maps--> 
+
+  <!-- Google Map -->
+  <script>
+    function initMap() {
+      var sgb_location = {lat: 4.813266, lng: 114.858343};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        scrollwheel: false,
+        center: sgb_location
+        
+      });
+
+
+      var marker = new google.maps.Marker({
+      
+        position: sgb_location,
+        map: map,
+        icon: 'Image/sgb-75x40.png',
+        url: 'https://goo.gl/maps/h2TwRUUauNQ2'
+      });
+
+      marker.addListener('click', function()
+
+      {
+        window.open(this.url, "_blank");
+      });
+
+      
+      }
+
+      
+
+
+    
+
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOi9WEcj0Jv1E3Eu46lwwiPOrzNwqZwPg&callback=initMap"></script>
+
+  <link href="https://fontawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">

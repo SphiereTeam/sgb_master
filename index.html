@@ -12,8 +12,8 @@
 	<link rel="shortcut icon"type="Image/ico" href="Image/favicon.ico">
 	 
  
+	<!---Google Map--> 
 	
-
 
 	<title>Sin Guan Brothers Co. </title>
 
@@ -23,6 +23,8 @@
 	<!-- Bootstrap Core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Buttons styles--> 
+<link href="css/button.css" rel="stylesheet">
 
 	<!-- Theme CSS -->
 	<link href="css/freelancer.min.css" rel="stylesheet">
@@ -42,6 +44,9 @@
 	<!--- ihover css -->
 	<link href="css/ihover.css" rel="stylesheet">
 	<link href="css/ihover.min.css" ref="stylesheet">
+
+<!--- maps css-->
+	<link href="maps.css" rel="stylesheet">
 
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -873,43 +878,7 @@
 
 	<script src="js/modal.js"></script>
 
-	<!-- Google Map -->
-	<script>
-		function initMap() {
-			var sgb_location = {lat: 4.813266, lng: 114.858343};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				scrollwheel: false,
-				center: sgb_location
-				
-			});
-
-
-			var marker = new google.maps.Marker({
-			
-				position: sgb_location,
-				map: map,
-				icon: 'Image/sgb-75x40.png',
-				url: 'https://goo.gl/maps/h2TwRUUauNQ2'
-			});
-
-			marker.addListener('click', function()
-
-			{
-				window.open(this.url, "_blank");
-			});
-
-			
-			}
-
-			
-
-
-		
-
-
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOi9WEcj0Jv1E3Eu46lwwiPOrzNwqZwPg&callback=initMap"></script>
+	
 	
 	<!-- Slippry -->
 	<script src="slippry/slippry.min.js"></script>
@@ -954,69 +923,106 @@
 
 </body>
 
-<footer>
 
-<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-<!--footer start from here-->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 footerleft ">
-        <div class="logofooter"> LOCATION</div>
-        
-	
-	
-        
-      </div>
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">LOCATION</h6>
-        <p>UNIT 1-6, Block A, Junjongan Industrial Park,</p>
-					<p>Simpang 2169, Jalan Junjongan, Mukim Pangkalan Batu,</p>
-					<p> BH 2123</p>
-					<p>Bandar Seri Begawan, Brunei Darussalam</p>
-					<div class="parent "> 
-						<i class="glyphicon glyphicon-earphone"></i>	
-						 <p>+673 2640228 </p>
-					</div> 
 
-					<div class="parent"> 
-						<i class="glyphicon glyphicon-envelope"></i>
-						<p> singuan1966@gmail.com</p>
-					</div>
-						
-					<div class="parent"> 	
-						<i class="fa fa-fax"></i>
-								
-						<p> +673 2640178 </p>
-      </div>
-  </div>
-      <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">HOURS</h6>
-        <div class="post">
-        	<p> Monday - Saturday : 0800 - 1700 </p>
-        	<p> Friday : Closed, 1200 - 1400 </p> 
-        	<p> Sunday : Closed </p>
-          
-
-        </div>
-      </div>
-    
-    <div class="footer-bottom">
-    </div>
-    </div>
-  </div>
-</footer>
 <!--footer start from here-->
 
-<!-- <div class="copyright">
-  <div class="container">
-    <div class="col-md-6">
-      <p>&copy; 2017 Sin Guan Brothers</p>
-    </div>
-  </div>
-</div> -->
 
-	</footer>
+<footer> 
+
+
+<section id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				
+
+<div id="map-canvas"></div>
+
+	</div>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
+
+<script> 
+
+
+	var map;
+var richmond = new google.maps.LatLng(4.813310, 114.858301);
+var gogcan = new google.maps.LatLng(4.813310, 114.858301);
+
+var MY_MAPTYPE_ID = 'custom_style';
+
+function initialize() {
+
+  var featureOpts = [ { "stylers": [ { "saturation": -100 }, { "lightness": -5 } ] } ];
+
+  var mapOptions = {
+    zoom: 17,
+    center: richmond,
+    mapTypeControl: false,
+    scrollwheel: false,
+    zoomControl: true,
+    mapTypeId: MY_MAPTYPE_ID
+  };
+  
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  var customMapType = new google.maps.StyledMapType(featureOpts);
+  
+  var contentString = 
+      
+      '<div id="infowindow-content">'+
+      '<ul>'+
+        '<li>Unit 1-6, Block A, Junjongan Industrial Park,</li>'+
+        '<li>Simpang 2169, Jalan Junjongan, Mukim Pangkalan Batu, </li>'+
+        '<li>Bh 2123, Brunei Darussalam</li>'+
+      '</ul>'+
+      '</div>';
+  
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+  
+  var icon = {
+    path: "M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z",
+    fillColor: '#c21f31',
+    fillOpacity: .8,
+    anchor: new google.maps.Point(0,0),
+    strokeWeight: 0,
+    scale: 1/4
+  }
+  
+  var marker = new google.maps.Marker({
+      position: gogcan,
+      map: map,
+      draggable: false,
+      icon: 'image/sgb-75x40.png',
+      title: 'Sin Guan Brothers CO. '
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+  
+  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, "resize", function() {
+ 
+ var center = map.getCenter();
+ google.maps.event.trigger(map, "resize");
+ map.setCenter(center); 
+});
+
+</script>
+
+
+
+</footer> 
+  
+
+
 
 	
 

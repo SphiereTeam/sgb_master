@@ -1,0 +1,19 @@
+#map-canvas {
+  max-width: 100%;
+  height: 600px;
+  padding: 0px;
+}
+
+#map-canvas img {
+  /* Prevent streetview buddy from getting squished by img max-width: 100% */
+  max-width: none; 
+}
+
+#infowindow-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+#infowindow-content ul li {
+  padding-bottom: 3px;
+}
