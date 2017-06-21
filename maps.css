@@ -17,3 +17,12 @@
 #infowindow-content ul li {
   padding-bottom: 3px;
 }
+
+#menu 
+{
+
+position: relative;
+bottom: 500px;
+left: 100px;
+	
+}

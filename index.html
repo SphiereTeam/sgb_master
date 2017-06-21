@@ -932,92 +932,155 @@
 
 
 <section id="contact">
-		<div class="container-fluid">
-			<div class="row">
 				
 
 <div id="map-canvas"></div>
+<div id="menu">
+  <div class="container-fluid">
+    <div class="row">
+  <h4> LOCATION </h4> 
+  <div class="col-sm-4">
+ UNIT 1-6, Block A, 
+          <br>
+          Junjongan Industrial Park,
+          <br> 
+          Simpang 2169, Jalan Junjongan,
+            <br>
+             Mukim Pangkalan Batu,
+             <br> 
+    BRUNEI DARUSSALAM, BH 2123
+            <br>
+          </div> 
 
-	</div>
+  <div class="col-sm-4">
+          <h4> HOURS </h4> 
+          Monday - Saturday : 0800 - 1700 
+          <br> 
+          Friday : Closed, 1200 - 1400 
+          <br> 
+          Sunday : Closed 
+          </div>
+
+
+  <div class="col-sm-4">
+<h4> CONTACT </h4> 
+  <i class="glyphicon glyphicon-earphone"></i>  (673) 264228 
+  <br> 
+  <br> 
+  <i class="fa fa-fax"> </i> (673) 2640178
+    <br> 
+  <br> 
+  <i class="glyphicon glyphicon-envelope"></i> singuan1966@gmail.com
+</div>
+   </div>
+     </div>
+</div> 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
 
 <script> 
 
 
-	var map;
-var richmond = new google.maps.LatLng(4.813310, 114.858301);
-var gogcan = new google.maps.LatLng(4.813310, 114.858301);
+function init_google_map(map_coords, map_type) {
+  var color = "#51a17b";
+  var styleArray = [
+    {
+      "featureType": "landscape",
+      "stylers": [
+        {"saturation": -100},
+        {"lightness": 65},
+        {"visibility": "on"}
+      ]
+    },
+    {
+      "featureType": "poi",
+      "stylers": [
+        {"saturation": -100},
+        {"lightness": 51},
+        {"visibility": "simplified"}
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "stylers": [
+        {"saturation": -100},
+        {"visibility": "simplified"}
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "stylers": [
+        {"saturation": -100},
+        {"lightness": 30},
+        {"visibility": "on"}
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "stylers": [
+        {"saturation": -100},
+        {"lightness": 40},
+        {"visibility": "on"}
+      ]
+    },
+    {
+      "featureType": "transit",
+      "stylers": [
+        {"saturation": -100},
+        {"visibility": "simplified"}
+      ]
+    },
+    {
+      "featureType": "administrative.province",
+      "stylers": [
+        {"visibility": "off"}
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+        {"visibility": "on"},
+        { "lightness": -25 },
+        { "saturation": -100}
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        {"hue": color},
+        {"lightness": -25},
+        {"saturation": -87}
+      ]
+    }
+  ];
 
-var MY_MAPTYPE_ID = 'custom_style';
-
-function initialize() {
-
-  var featureOpts = [ { "stylers": [ { "saturation": -100 }, { "lightness": -5 } ] } ];
-
+  var isDraggable = jQuery(document).width() > 480 ? true : false;
+  var lat_lng = map_coords.split(',');
+  var point = new google.maps.LatLng( lat_lng[0], lat_lng[1] );
+  var map_icon = 'Image/sgb-75x40.png';
+  var google_map_type = google.maps.MapTypeId.ROADMAP;
+  if ( map_type == 'satellite' ) {
+    google_map_type = google.maps.MapTypeId.SATELLITE;
+  } 
   var mapOptions = {
-    zoom: 17,
-    center: richmond,
-    mapTypeControl: false,
-    scrollwheel: false,
-    zoomControl: true,
-    mapTypeId: MY_MAPTYPE_ID
-  };
-  
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  var customMapType = new google.maps.StyledMapType(featureOpts);
-  
-  var contentString = 
-      
-      '<div id="infowindow-content">'+
-      '<ul>'+
-        '<li>Unit 1-6, Block A, Junjongan Industrial Park,</li>'+
-        '<li>Simpang 2169, Jalan Junjongan, Mukim Pangkalan Batu, </li>'+
-        '<li>Bh 2123, Brunei Darussalam</li>'+
-      '</ul>'+
-      '</div>';
-  
-  var infowindow = new google.maps.InfoWindow({
-      content: contentString
-  });
-  
-  var icon = {
-    path: "M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z",
-    fillColor: '#c21f31',
-    fillOpacity: .8,
-    anchor: new google.maps.Point(0,0),
-    strokeWeight: 0,
-    scale: 1/4
-  }
-  
+    zoom: 16,
+    center: point,
+    mapTypeId: google_map_type,
+    styles:styleArray,
+    draggable: isDraggable,
+    scrollwheel: false
+  } 
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   var marker = new google.maps.Marker({
-      position: gogcan,
-      map: map,
-      draggable: false,
-      icon: 'image/sgb-75x40.png',
-      title: 'Sin Guan Brothers CO. '
+    position: point,
+    map: map,
+    icon: map_icon
   });
-
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-  });
-  
-  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
-google.maps.event.addDomListener(window, "resize", function() {
- 
- var center = map.getCenter();
- google.maps.event.trigger(map, "resize");
- map.setCenter(center); 
-});
-
+init_google_map("4.813315,114.858305", "road");
 </script>
-
-
 
 </footer> 
   
