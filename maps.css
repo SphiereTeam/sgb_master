@@ -18,20 +18,26 @@
   padding-bottom: 3px;
 }
 
-#menu 
-{
+#contact{
+  background: url(img/map_1343x400.jpg);
+  background-size: cover;
+}
+
+#menu {
 bottom: 500px;
 left: 100px;
 color: #fff;
-background-color: #24252f;
+/*background-color: #24252f;*/
+background: none;
 	
 }
 
-#top-footer
-{
-
-	background-color: #24252f;
+#top-footer{
+	/*background-color: #24252f;*/
+  background: none;
 }
+
+
 
 #credits	{
 
