@@ -20,9 +20,21 @@
 
 #menu 
 {
-
-position: relative;
 bottom: 500px;
 left: 100px;
+color: #fff;
+background-color: #24252f;
 	
+}
+
+#top-footer
+{
+
+	background-color: #24252f;
+}
+
+#credits	{
+
+	color: #fff;
+	background-color: #242935;
 }
