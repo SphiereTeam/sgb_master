@@ -324,3 +324,26 @@ a.navbar-brand {
     padding-top: 80px;
     padding: 15px;
 }
+
+#footer-below {
+
+  padding: 30px 0; 
+  background-color: #242935;
+}
+
+#copyright {
+
+  color: #959595;
+  font-size: 19px;
+
+}
+
+#poweredby
+{ 
+
+color: #fff;
+font-weight: bold;
+font-size:  19px; 
+margin-top: -5px;
+
+}
