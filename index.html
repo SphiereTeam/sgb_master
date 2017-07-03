@@ -55,6 +55,11 @@
 
 <link rel="stylesheet" href="css/buttons.css" rel="stylesheet">
 
+<!--scroll css--> 
+<link rel="stylesheet" href="css/section.css" rel="stylesheet">
+
+
+
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,6 +71,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -142,7 +148,7 @@
 
 	<!-- Place somewhere in the <body> of your page -->
 	
-		
+		<!-- slider hidden 
 			
 	<ul id="slippry-demo">
 		<li>
@@ -156,7 +162,7 @@
 		</li>
 	</ul>
 			
-		
+		--> 
 	
 				
 				
@@ -226,9 +232,14 @@
 			</div></a></div>
 			</div>
 
+<!-- scroll button -->
 
-	</section>
 
+<section id="section02" class="demo"> </section> 
+	 <script src="js/scroll.js"></script>
+  </section>
+
+ 
 
 
 <section id="portfolio">
@@ -1351,112 +1362,5 @@ POWERED BY <a href="http://sphiere.com.bn" target="_blank">SPHIERE</a>
 </div>
 </div>
 
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
-
-<script> 
-
-
-function init_google_map(map_coords, map_type) {
-  var color = "#51a17b";
-  var styleArray = [
-    {
-      "featureType": "landscape",
-      "stylers": [
-        {"saturation": -100},
-        {"lightness": 65},
-        {"visibility": "on"}
-      ]
-    },
-    {
-      "featureType": "poi",
-      "stylers": [
-        {"saturation": -100},
-        {"lightness": 51},
-        {"visibility": "simplified"}
-      ]
-    },
-    {
-      "featureType": "road.highway",
-      "stylers": [
-        {"saturation": -100},
-        {"visibility": "simplified"}
-      ]
-    },
-    {
-      "featureType": "road.arterial",
-      "stylers": [
-        {"saturation": -100},
-        {"lightness": 30},
-        {"visibility": "on"}
-      ]
-    },
-    {
-      "featureType": "road.local",
-      "stylers": [
-        {"saturation": -100},
-        {"lightness": 40},
-        {"visibility": "on"}
-      ]
-    },
-    {
-      "featureType": "transit",
-      "stylers": [
-        {"saturation": -100},
-        {"visibility": "simplified"}
-      ]
-    },
-    {
-      "featureType": "administrative.province",
-      "stylers": [
-        {"visibility": "off"}
-      ]
-    },
-    {
-      "featureType": "water",
-      "elementType": "labels",
-      "stylers": [
-        {"visibility": "on"},
-        { "lightness": -25 },
-        { "saturation": -100}
-      ]
-    },
-    {
-      "featureType": "water",
-      "elementType": "geometry",
-      "stylers": [
-        {"hue": color},
-        {"lightness": -25},
-        {"saturation": -87}
-      ]
-    }
-  ];
-
-  var isDraggable = jQuery(document).width() > 480 ? true : false;
-  var lat_lng = map_coords.split(',');
-  var point = new google.maps.LatLng( lat_lng[0], lat_lng[1] );
-  var map_icon = 'Image/sgb-75x40.png';
-  var google_map_type = google.maps.MapTypeId.ROADMAP;
-  if ( map_type == 'satellite' ) {
-    google_map_type = google.maps.MapTypeId.SATELLITE;
-  } 
-  var mapOptions = {
-    zoom: 16,
-    center: point,
-    mapTypeId: google_map_type,
-    styles:styleArray,
-    draggable: isDraggable,
-    scrollwheel: false
-  } 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  var marker = new google.maps.Marker({
-    position: point,
-    map: map,
-    icon: map_icon
-  });
-}
-
-init_google_map("4.813315,114.858305", "road");
-</script> --> 
-</section>
 </footer> 
 </html>
