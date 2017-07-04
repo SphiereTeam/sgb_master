@@ -87,3 +87,64 @@ figure.snip1140.hover figcaption h3 {
   -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
+
+/* media queries 
+
+
+
+@media screen and (min-width:386px) {
+    #left {
+    
+       position: relative;
+       margin:auto;
+       padding-top:124px;
+    }
+}
+
+
+@media screen and (min-width:386px) {
+    #right {
+  width: 90%;
+  position:absolute;
+  padding-top:320px;
+    }
+}
+
+@media screen and (min-width:458px) {
+    #left {
+    
+       position: relative;
+       margin:auto;
+       padding-top:124px;
+    }
+}
+
+
+@media screen and (min-width:458px) {
+    #right {
+  width: 90%;
+  position:absolute;
+  padding-top:400px;
+    }
+}
+
+@media screen and (max-width:561px) {
+    #left {
+    
+       position: relative;
+       margin:auto;
+       padding-top:124px;
+    }
+}
+
+
+@media screen and (max-width:561px) {
+    #right {
+  width: 90%;
+  position:absolute;
+  padding-top:480px;
+    }
+}
+
+*/
+
