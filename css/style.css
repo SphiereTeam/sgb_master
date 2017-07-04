@@ -348,4 +348,34 @@ margin-top: -5px;
 
 }
 
+  #left { position: absolute; 
+    left: 0; 
 
+     width: 50%; 
+     padding-top: 160px;
+ }
+    #right { position: absolute; 
+        right: 0; 
+  
+         width: 50%; 
+         padding-top: 160px; 
+         right: 40px ;
+     }
+
+
+@media screen and (max-width:386px) {
+    
+    .btn 
+    {
+
+        bottom : 100px ;
+    }
+}
+
+#button {
+
+    position: relative;
+    bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px ; 
+}

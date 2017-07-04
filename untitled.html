@@ -1,0 +1,84 @@
+@bgcolor: #bdc3c7;
+@bordercolor: #34495e;
+@borderwidth: 10px;
+@size: 200px;
+
+.oblique {
+  display: block;
+  width: @size;
+  height: @size;
+  border: @borderwidth solid @bordercolor;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  overflow: hidden;
+/*  box-shadow: inset @bordercolor -2px 0 0 -2px;*/
+  
+  @factor: 1.1; 
+  
+  &:before,
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-style: solid;
+//  border-width: W     0 H     DEPTH;
+    border-width: @size*@factor 0 @size*@factor @size*@factor;
+    border-color: transparent transparent transparent @bordercolor;
+    transform-origin: 0 0;
+    animation: 2s ease infinite;
+  }
+  &:before {
+    transform: rotate(-45deg);
+    animation-name: animandriuB;
+  }
+  &:after {
+    transform: rotate(-225deg) translate(0, -100%);
+    animation-name: animandriuA;
+  }
+}
+
+@keyframes animandriuB {
+  0%   {
+    border-width: @size 0 @size 0;
+    transform: rotate(-45deg) translate(0, 100%);
+  }
+  30%  {
+    border-width: @size 0 @size @size/10;
+  }
+  40%  {
+    border-width: @size 0 @size @size;
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes animandriuA {
+  0%   {
+    border-width: @size 0 @size 0;
+    transform: rotate(-225deg) translate(0, -200%);
+  }
+  30%  {
+    border-width: @size 0 @size @size/10;
+  }
+  40%  {
+    border-width: @size 0 @size @size;
+    transform: rotate(-225deg) translate(0, -100%);
+  }
+}
+
+// General Style
+html,body {height:100%;}
+body {
+  background-color: #bdc3c7;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*animation: kenburn 10s linear infinite forwards;*/
+  transform-origin: center center;
+  -webkit-filter: blur(4px) saturate(.6);
+}

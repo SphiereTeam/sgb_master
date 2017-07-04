@@ -1,0 +1,89 @@
+
+figure.snip1140 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  min-width: 180px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: translateY(20%) rotate(45deg);
+  transform: translateY(20%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  bottom: 150px ;
+}
+
+figure.snip1140 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure.snip1140 img {
+  max-width: 100%;
+  -webkit-transform: scale(1.45) rotate(-45deg);
+  transform: scale(1.45) rotate(-45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.snip1140 figcaption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+figure.snip1140 h3 {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  padding: 0 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.snip1140 h3 span {
+  font-weight: 800;
+}
+
+figure.snip1140 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+figure.snip1140:hover img,
+figure.snip1140.hover img {
+  opacity: 0.15;
+}
+
+figure.snip1140:hover figcaption h3,
+figure.snip1140.hover figcaption h3 {
+  opacity: 0.9;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
