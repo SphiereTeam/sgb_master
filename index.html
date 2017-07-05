@@ -58,7 +58,7 @@
 <!--scroll css--> 
 <link rel="stylesheet" href="css/section.css" rel="stylesheet">
 <!-- Diamond css --> 
-<link rel="stylesheet" href="diamond.css">
+<link rel="stylesheet" href="css/diamond.css">
 
 
 
@@ -247,8 +247,21 @@
 <!-- scroll button -->
 
 
-<section id="section02" class="demo"> </section> 
-	 <script src="js/scroll.js"></script>
+<section id="section07" class="demo">
+  <a href="#portfolio"><span></span><span></span><span></span>Scroll</a>
+</section>
+
+<!-- scroll js --> 
+<script> 
+$(function() {
+  $('a[href*=\\#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+
+</script> 
+
    <script src="css/diamond.js"> </script> 
 
 
